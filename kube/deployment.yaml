@@ -14,5 +14,5 @@ spec:
         app: otus
     spec:
       containers:
-        - image: mksikayo/otus-hw-2-health-check
+        - image: mksikayo/otus-hw-2-health-check:2
           name: healthcheck

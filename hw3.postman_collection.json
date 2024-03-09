@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ff999380-88ca-4ed7-9985-a883583cbd12",
-		"name": "hw-3",
+		"_postman_id": "bf80f0cb-e8bb-4c11-91c4-a381db47988e",
+		"name": "hw3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -91,7 +91,8 @@
 							"});",
 							"",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.eql(\"404 page not found\\n\");",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.error).to.eql(\"Not Found\");",
 							"});"
 						],
 						"type": "text/javascript"
